@@ -8,7 +8,7 @@
 | 查看项目功能和技术栈 | [项目 README](README.md) |
 | 修改 API、数据库模型或迁移 | [后端说明](backend/README.md) |
 | 修改页面、生成 API 客户端或运行浏览器测试 | [前端说明](frontend/README.md) |
-| 开发前创建或复用 worktree、命名分支、提 PR/MR | [Worktree 开发流程](docs/worktree-workflow.md) |
+| 创建或复用 worktree、命名分支、写提交信息和 PR/MR | [Worktree 开发流程](docs/worktree-workflow.md) |
 | 提交前跑测试、检查代码复用 | [质量检查](docs/quality-checks.md) |
 
 开始修改源码前，先读取 `docs/worktree-workflow.md`，再按其中的命名约定创建或复用任务 worktree。日常业务改动在独立 worktree 的任务分支上完成。主工作目录用于运行项目、排查和同步主分支。日常变更推送任务分支，通过 PR/MR 合入 `master`。
