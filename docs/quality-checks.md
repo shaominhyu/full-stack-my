@@ -10,6 +10,7 @@
 | 前端交互或跨前后端的功能 | `bash scripts/test-isolated.sh browser tests/items.spec.ts` | 用浏览器跑用户操作，确认能提交并看到结果。将路径换成对应的用例，省略路径运行 Playwright 全套。 |
 | Dockerfile、Compose 或数据库迁移 | `bash scripts/test-isolated.sh compose` | 构建应用镜像、迁移空数据库、访问 API 健康检查和登录页。迁移改动还要跑受影响的后端测试。 |
 | 修改 Python 代码 | `(cd backend && uv run --locked bash scripts/lint.sh)` | 检查 Python 类型、lint 和格式。 |
+| 项目脉络条目、来源或检查器 | `python3 context/check.py`，修改检查器时另跑 `python3 -B -m unittest discover -s context/tests` | 核对本地依据，验证来源变更、缺失等情况能提示受影响的条目。 |
 | 修改前端代码 | `(cd frontend && bun run build)` | 用 TypeScript 检查类型，再构建前端。需要已安装前端依赖。 |
 | 修改应用源码或复用规则 | `bash scripts/check-duplication.sh github/master` | 以 PR/MR 目标分支为基线，检查新增重复和违反复用规则的代码。按实际目标分支替换 `github/master`。 |
 
